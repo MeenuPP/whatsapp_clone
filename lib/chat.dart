@@ -11,7 +11,7 @@ class chats extends StatelessWidget {
         title: Text(
           "Whatsapp",
           style: TextStyle(
-            fontSize: 30,
+            fontSize: 20,
             fontWeight: FontWeight.bold,
             color: Colors.green,
           ),
@@ -27,7 +27,7 @@ class chats extends StatelessWidget {
         PopupMenuItem(child: Text("Payments")),
         PopupMenuItem(child: Text("Read all")),
         PopupMenuItem(child: Text("Settings")),
-        PopupMenuItem(child: Text("Switch account")),
+  
         ] )],
         
       ),
