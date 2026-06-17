@@ -13,7 +13,7 @@ class Updates extends StatelessWidget {
           style: TextStyle(
             fontSize: 20,
             fontWeight: FontWeight.bold,
-            color: Colors.green,
+            color: Colors.black,
           ),
         ),
         actions: [
@@ -31,7 +31,7 @@ class Updates extends StatelessWidget {
         ],
       ),
       floatingActionButton: Column(
-        mainAxisAlignment: MainAxisAlignment.end,
+        mainAxisAlignment: .end,
         children: [
           FloatingActionButton(onPressed: () {}, child: Icon(Icons.edit)),
           FloatingActionButton(
@@ -42,30 +42,32 @@ class Updates extends StatelessWidget {
           ),
         ],
       ),
-
-      body: Column(crossAxisAlignment: .start,
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               SizedBox(
                 height: 150,
                 width: 100,
                 child: Card(
-                  color: Colors.grey,
+                  color: const Color.fromARGB(255, 190, 179, 179),
                   child: Stack(
                     children: [
-                      CircleAvatar(radius: 20,
-                        child: Icon(Icons.circle),
-                        backgroundColor: Colors.grey,
+                      CircleAvatar(
+                        backgroundColor: const Color.fromARGB(
+                          255,
+                          144,
+                          152,
+                          144,
+                        ),
                       ),
-                      Positioned(left: 15,top: 10,
+                      Positioned(
+                        left: 18,
+                        top: 25,
                         child: CircleAvatar(
-                          radius: 10,
-                          child: Icon(
-                            Icons.add,
-                            size: 6,color: Colors.white,
-                          ),
+                          radius: 8,
+                          child: Icon(Icons.add, color: Colors.white, size: 10),
                           backgroundColor: Colors.green,
                         ),
                       ),
@@ -73,16 +75,70 @@ class Updates extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(height: 150,width: 100,child:Card(color: Colors.grey,child: Stack(children: [CircleAvatar(backgroundImage: NetworkImage("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsHnU5BAE_3Xku1OIFc_6QT1UnYYFb86Mjm_8VGoN-eA&s=10"),)],),) ,),
-             
-            ],
-          ), 
-          
-          Text(
-                  "Status",
-                  style: TextStyle(fontSize: 20,color: Colors.green ),
 
+              SizedBox(
+                height: 150,
+                width: 100,
+                child: Card(
+                  color: const Color.fromARGB(255, 190, 179, 179),
+                  child: Stack(
+                    children: [
+                      Container(
+                        decoration: BoxDecoration(
+                          image: DecorationImage(
+                            image: NetworkImage(
+                              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFZRw61hmRNpox4YAfxdu0oeMisgYWg5vphFO_kZL3Ng&s=10",
+                            ),
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                      ),
+                      CircleAvatar(
+                        backgroundImage: NetworkImage(
+                          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsHnU5BAE_3Xku1OIFc_6QT1UnYYFb86Mjm_8VGoN-eA&s=10",
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
               ),
+              SizedBox(
+                height: 150,
+                width: 100,
+                child: Card(
+                  color: const Color.fromARGB(255, 190, 179, 179),
+                  child: Stack(
+                    children: [
+                      Container(
+                        decoration: BoxDecoration(
+                          image: DecorationImage(
+                            image: NetworkImage(
+                              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVnJjnKNeLvtwfvYS_ySA_w9WpIa1hqSLNH3NBt_yi9g&s=10",
+                            ),
+
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                      ),
+                      CircleAvatar(
+                        backgroundImage: NetworkImage(
+                          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUqD57p9d_iNXYdqvfzSc96PNLc8jjdjU-FvoaSBct-w&s=10",
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ],
+          ),
+
+          Padding(
+            padding: const EdgeInsets.all(15.0),
+            child: Text(
+              "Status",
+              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+            ),
+          ),
         ],
       ),
     );

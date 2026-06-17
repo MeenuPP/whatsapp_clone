@@ -9,7 +9,7 @@ class chats extends StatelessWidget {
       backgroundColor: Colors.white,
       appBar: AppBar(
         title: Text(
-          "Whatsapp",
+          "WhatsApp",
           style: TextStyle(
             fontSize: 20,
             fontWeight: FontWeight.bold,
